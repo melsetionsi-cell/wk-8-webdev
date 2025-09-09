@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RandoWeb - Creative Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1 class="logo">RandoWeb</h1>
+    <nav>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Welcome to <span>RandoWeb</span></h2>
+        <p>We craft stunning websites & digital experiences.</p>
+        <a href="#portfolio" class="btn">See Our Work</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="fade-in">
+      <h2>About Us</h2>
+      <p>
+        At RandoWeb, we are a team of designers, developers, and dreamers who
+        love turning ideas into reality. From small startups to global brands,
+        we’ve helped clients stand out with creative and functional digital
+        solutions.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="fade-in">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">🌐 <h3>Web Design</h3><p>Modern, responsive, and fast websites.</p></div>
+        <div class="service-card">📱 <h3>App Prototyping</h3><p>Interactive prototypes for mobile apps.</p></div>
+        <div class="service-card">🎨 <h3>Branding</h3><p>Logo, color, and identity design.</p></div>
+        <div class="service-card">⚡ <h3>SEO Boost</h3><p>Get discovered with performance SEO.</p></div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="fade-in">
+      <h2>Our Work</h2>
+      <div class="grid">
+        <figure>
+          <figcaption><strong>E-Shopify</strong><br>An elegant e-commerce platform for boutique stores.</figcaption>
+        </figure>
+        <figure>
+          <figcaption><strong>TravelMate</strong><br>A mobile app for planning trips and sharing adventures.</figcaption>
+        </figure>
+        <figure>
+          <figcaption><strong>FitTrack Pro</strong><br>A fitness dashboard with analytics and progress tracking.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="fade-in">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label>Name: <input type="text" name="name" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Message: <textarea name="message" required></textarea></label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 RandoWeb | Built with TIONSI!</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
