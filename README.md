@@ -1,20 +1,20 @@
-# 🌐 RandoWeb - One Page Creative Portfolio
+# 🚀 Multipage Portfolio Website
 
-RandoWeb is a **responsive single-page portfolio website** built with **HTML5, CSS3, and vanilla JavaScript**.  
-It demonstrates modern web development practices such as **semantic HTML**, **responsive layouts**, **scroll animations**, and **interactive navigation**.
+## 📌 Project Purpose
+This project is the final assignment for the PLP Web Technologies module. It demonstrates my ability to plan, build, organize, and deploy a responsive, interactive multi-page website using HTML5, CSS, and JavaScript. The site serves as a personal portfolio to showcase my skills, services, and contact information.
 
----
+## 🧭 Site Structure
+The website includes the following pages:
+- **Home** – Introduction and welcome message
+- **About** – Personal background and mission
+- **Services** – Overview of offerings and expertise
+- **Contact** – Form for inquiries and contact details
 
-## 🎯 Purpose
+Each page shares a consistent layout with a responsive header, footer, and navigation menu.
 
-The purpose of this project is to:
-- Showcase a **multipage website structure merged into one-page navigation**.
-- Practice using **semantic HTML5** for better accessibility and SEO.
-- Implement **responsive design** with CSS Flexbox and Grid.
-- Add **interactivity with JavaScript** (form validation, mobile menu, active navigation, scroll animations).
-- Prepare a production-ready structure that is **clean, maintainable, and scalable**.
+## 🛠️ Technologies Used
+- **HTML5** – Semantic structure across all pages
+- **CSS3** – Responsive design, layout styling, and animations
+- **JavaScript** – Interactive elements including mobile menu toggle
 
----
-
-## 📂 Project Structure
-
+## 📂 Project Organization
