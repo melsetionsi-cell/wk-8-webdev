@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn German - Polyglot Academy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #000000 0%, #ffcc00 100%);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .course {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    .course h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-size: 2rem;
+    }
+    
+    .lesson-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .lesson-list li {
+      background: white;
+      margin-bottom: 0.75rem;
+      padding: 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .lesson-list li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      background: #fffdf0;
+    }
+    
+    .lesson-content {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+    
+    .lesson-content h3 {
+      color: #000;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #ffcc00;
+    }
+    
+    .phrase-card {
+      background: #fffdf0;
+      border-left: 4px solid #000;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    
+    .german {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+    }
+    
+    .pronunciation {
+      color: #d63384;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    
+    .english {
+      color: #666;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    
+    .btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    .active {
+      display: block;
+    }
+    
+    .tab {
+      margin-left: 1.5rem;
+    }
+    
+    .german-flag {
+      display: inline-block;
+      width: 20px;
+      height: 12px;
+      background: linear-gradient(to bottom, 
+        #000000 0%, #000000 33%, 
+        #ff0000 33%, #ff0000 66%, 
+        #ffcc00 66%, #ffcc00 100%);
+      margin-right: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn German</h1>
+    <p>Willkommen! Master the language of poets and thinkers.</p>
+  </header>
+
+  <section class="course">
+    <h2>German Lessons</h2>
+    <ul class="lesson-list">
+      <li onclick="showContent('alphabet')"><span class="german-flag"></span>🔤 Alphabet & Pronunciation</li>
+      <div id="alphabet" class="lesson-content">
+        <h3>Alphabet & Pronunciation</h3>
+        <div class="phrase-card">
+          <div class="german">Guten Tag (Good day)</div>
+          <div class="pronunciation">Pronunciation: goo-ten tahk</div>
+          <div class="english">Standard formal greeting used throughout the day</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Auf Wiedersehen (Goodbye)</div>
+          <div class="pronunciation">Pronunciation: owf vee-der-zayn</div>
+          <div class="english">Formal way to say goodbye</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">The German alphabet has 26 letters plus umlauts (ä, ö, ü) and the ß (Eszett)</div>
+          <div class="pronunciation">Umlauts change vowel sounds: ä similar to 'ai' in 'air', ö like 'i' in 'bird', ü like 'ue' in 'blue'</div>
+          <div class="english">ß represents a double 's' sound and is used after long vowels</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('greetings')"><span class="german-flag"></span>👋 Greetings & Introductions</li>
+      <div id="greetings" class="lesson-content">
+        <h3>Greetings & Introductions</h3>
+        <div class="phrase-card">
+          <div class="german">Wie heißen Sie? (What's your name?)</div>
+          <div class="pronunciation">Pronunciation: vee hi-sen zee?</div>
+          <div class="english">Formal way to ask someone's name</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Ich heiße... (My name is...)</div>
+          <div class="pronunciation">Pronunciation: eesh hi-se...</div>
+          <div class="english">How to introduce yourself formally</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Wie geht es Ihnen? (How are you?)</div>
+          <div class="pronunciation">Pronunciation: vee gayt es ee-nen?</div>
+          <div class="english">Formal way to ask how someone is doing</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('food')"><span class="german-flag"></span>🍽️ Ordering Food</li>
+      <div id="food" class="lesson-content">
+        <h3>Ordering Food</h3>
+        <div class="phrase-card">
+          <div class="german">Ich hätte gern... (I would like...)</div>
+          <div class="pronunciation">Pronunciation: eesh het-te gern...</div>
+          <div class="english">Polite way to order food</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Die Rechnung, bitte (The check, please)</div>
+          <div class="pronunciation">Pronunciation: dee rech-noong, bit-te</div>
+          <div class="english">Asking for the bill</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Prost! (Cheers!)</div>
+          <div class="pronunciation">Pronunciation: prohst!</div>
+          <div class="english">Saying cheers before drinking</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('travel')"><span class="german-flag"></span>🗺️ Travel Phrases</li>
+      <div id="travel" class="lesson-content">
+        <h3>Travel Phrases</h3>
+        <div class="phrase-card">
+          <div class="german">Wo ist der Bahnhof? (Where is the train station?)</div>
+          <div class="pronunciation">Pronunciation: voh ist dehr bahn-hohf?</div>
+          <div class="english">Asking for directions to the station</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Wie viel kostet das? (How much does it cost?)</div>
+          <div class="pronunciation">Pronunciation: vee feel kos-tet das?</div>
+          <div class="english">Asking about price</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Sprechen Sie Englisch? (Do you speak English?)</div>
+          <div class="pronunciation">Pronunciation: shpre-shen zee eng-lish?</div>
+          <div class="english">Asking if someone speaks English</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('grammar')"><span class="german-flag"></span>📖 Grammar Basics</li>
+      <div id="grammar" class="lesson-content">
+        <h3>Grammar Basics</h3>
+        <div class="phrase-card">
+          <div class="german">Ich bin / Du bist / Er ist (I am / You are / He is)</div>
+          <div class="pronunciation">Pronunciation: eesh bin / doo bist / air ist</div>
+          <div class="english">Conjugation of the verb "to be" (sein)</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">Ich habe / Du hast / Er hat (I have / You have / He has)</div>
+          <div class="pronunciation">Pronunciation: eesh hah-be / doo hast / air hat</div>
+          <div class="english">Conjugation of the verb "to have" (haben)</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">German has three genders: masculine (der), feminine (die), neuter (das)</div>
+          <div class="english">Example: der Mann (the man), die Frau (the woman), das Kind (the child)</div>
+        </div>
+        <div class="phrase-card">
+          <div class="german">German has four cases: Nominative, Accusative, Dative, Genitive</div>
+          <div class="english">The case changes based on the noun's function in the sentence</div>
+        </div>
+      </div>
+    </ul>
+    <a href="index.html" class="btn">⬅ Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Polyglot Academy</p>
+  </footer>
+
+  <script>
+    function showContent(id) {
+      // Hide all content divs
+      const contents = document.querySelectorAll('.lesson-content');
+      contents.forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // Show the selected content
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
