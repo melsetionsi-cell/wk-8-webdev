@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Japanese - Polyglot Academy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #bc002d 0%, #ffffff 50%, #bc002d 100%);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: #bc002d;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .course {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    .course h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-size: 2rem;
+    }
+    
+    .lesson-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .lesson-list li {
+      background: white;
+      margin-bottom: 0.75rem;
+      padding: 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .lesson-list li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      background: #fff4f4;
+    }
+    
+    .lesson-content {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+    
+    .lesson-content h3 {
+      color: #bc002d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #ffebeb;
+    }
+    
+    .phrase-card {
+      background: #fffafa;
+      border-left: 4px solid #bc002d;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    
+    .japanese {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .romaji {
+      color: #d63384;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    
+    .english {
+      color: #666;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #bc002d;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    
+    .btn:hover {
+      background: #a00024;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    .active {
+      display: block;
+    }
+    
+    .writing-system {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .system {
+      width: 30%;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    
+    .system h4 {
+      color: #bc002d;
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 600px) {
+      .writing-system {
+        flex-direction: column;
+      }
+      
+      .system {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn Japanese</h1>
+    <p>ようこそ! Master the language of the rising sun.</p>
+  </header>
+
+  <section class="course">
+    <h2>Japanese Lessons</h2>
+    <ul class="lesson-list">
+      <li onclick="showContent('alphabet')">🔤 Alphabet & Pronunciation</li>
+      <div id="alphabet" class="lesson-content">
+        <h3>Alphabet & Pronunciation</h3>
+        <div class="phrase-card">
+          <div class="japanese">こんにちは (Hello)</div>
+          <div class="romaji">Romaji: Konnichiwa</div>
+          <div class="english">Standard greeting used during the day</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">さようなら (Goodbye)</div>
+          <div class="romaji">Romaji: Sayōnara</div>
+          <div class="english">Standard way to say goodbye</div>
+        </div>
+        
+        <h4>Japanese Writing Systems</h4>
+        <div class="writing-system">
+          <div class="system">
+            <h4>Hiragana (ひらがな)</h4>
+            <p>Phonetic system used for native Japanese words and grammar</p>
+            <div class="japanese">あ い う え お</div>
+          </div>
+          <div class="system">
+            <h4>Katakana (カタカナ)</h4>
+            <p>Phonetic system used for foreign words and emphasis</p>
+            <div class="japanese">ア イ ウ エ オ</div>
+          </div>
+          <div class="system">
+            <h4>Kanji (漢字)</h4>
+            <p>Chinese characters representing ideas or words</p>
+            <div class="japanese">日 本 語</div>
+          </div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('greetings')">👋 Greetings & Introductions</li>
+      <div id="greetings" class="lesson-content">
+        <h3>Greetings & Introductions</h3>
+        <div class="phrase-card">
+          <div class="japanese">お名前は何ですか？ (What's your name?)</div>
+          <div class="romaji">Romaji: Onamae wa nan desu ka?</div>
+          <div class="english">Polite way to ask someone's name</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">私は...です (My name is...)</div>
+          <div class="romaji">Romaji: Watashi wa... desu</div>
+          <div class="english">How to introduce yourself</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">はじめまして (Nice to meet you)</div>
+          <div class="romaji">Romaji: Hajimemashite</div>
+          <div class="english">Said when meeting someone for the first time</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">よろしくお願いします (Please be kind to me)</div>
+          <div class="romaji">Romaji: Yoroshiku onegaishimasu</div>
+          <div class="english">A common phrase used after introductions</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('food')">🍽️ Ordering Food</li>
+      <div id="food" class="lesson-content">
+        <h3>Ordering Food</h3>
+        <div class="phrase-card">
+          <div class="japanese">...をお願いします (I would like...)</div>
+          <div class="romaji">Romaji: ... o onegaishimasu</div>
+          <div class="english">Polite way to order food</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">お勘定をお願いします (The check, please)</div>
+          <div class="romaji">Romaji: Okanjō o onegaishimasu</div>
+          <div class="english">Asking for the bill</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">いただきます (I receive this food)</div>
+          <div class="romaji">Romaji: Itadakimasu</div>
+          <div class="english">Said before eating a meal</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">ごちそうさまでした (Thank you for the meal)</div>
+          <div class="romaji">Romaji: Gochisōsama deshita</div>
+          <div class="english">Said after finishing a meal</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('travel')">🗺️ Travel Phrases</li>
+      <div id="travel" class="lesson-content">
+        <h3>Travel Phrases</h3>
+        <div class="phrase-card">
+          <div class="japanese">駅はどこですか？ (Where is the train station?)</div>
+          <div class="romaji">Romaji: Eki wa doko desu ka?</div>
+          <div class="english">Asking for directions to the station</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">これはいくらですか？ (How much does it cost?)</div>
+          <div class="romaji">Romaji: Kore wa ikura desu ka?</div>
+          <div class="english">Asking about price</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">トイレはどこですか？ (Where is the bathroom?)</div>
+          <div class="romaji">Romaji: Toire wa doko desu ka?</div>
+          <div class="english">Asking for restroom location</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">助けてください！ (Please help me!)</div>
+          <div class="romaji">Romaji: Tasukete kudasai!</div>
+          <div class="english">Asking for help in an emergency</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('grammar')">📖 Grammar Basics</li>
+      <div id="grammar" class="lesson-content">
+        <h3>Grammar Basics</h3>
+        <div class="phrase-card">
+          <div class="japanese">です (Desu - to be)</div>
+          <div class="romaji">私は学生です (Watashi wa gakusei desu)</div>
+          <div class="english">I am a student (Copula verb similar to "is/am/are")</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">ます (Masu - verb ending)</div>
+          <div class="romaji">食べます (Tabemasu - I eat)</div>
+          <div class="english">Polite verb form ending</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">は (Wa - topic marker)</div>
+          <div class="romaji">私は (Watashi wa - as for me)</div>
+          <div class="english">Particle indicating the topic of the sentence</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">を (Wo - object marker)</div>
+          <div class="romaji">りんごを食べます (Ringo o tabemasu - I eat an apple)</div>
+          <div class="english">Particle indicating the direct object</div>
+        </div>
+        <div class="phrase-card">
+          <div class="japanese">か (Ka - question marker)</div>
+          <div class="romaji">元気ですか？ (Genki desu ka? - How are you?)</div>
+          <div class="english">Particle placed at the end to form a question</div>
+        </div>
+      </div>
+    </ul>
+    <a href="index.html" class="btn">⬅ Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Polyglot Academy</p>
+  </footer>
+
+  <script>
+    function showContent(id) {
+      // Hide all content divs
+      const contents = document.querySelectorAll('.lesson-content');
+      contents.forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // Show the selected content
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
