@@ -38,7 +38,7 @@ polyglot-academy/
 
 4. Right-click on `index.html` → **Open with Live Server**.
 
-5. The website will launch in your browser at  http://127.0.0.1:5500/index.html
+5. The website will launch in your browser at https://mellifluous-dasik-0990f7.netlify.app/
 
 
 ---
