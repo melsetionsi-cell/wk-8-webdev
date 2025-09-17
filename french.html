@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn French - Polyglot Academy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #0072b5 0%, #8a2be2 100%);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .course {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    .course h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-size: 2rem;
+    }
+    
+    .lesson-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .lesson-list li {
+      background: white;
+      margin-bottom: 0.75rem;
+      padding: 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .lesson-list li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      background: #f8f9ff;
+    }
+    
+    .lesson-content {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+    
+    .lesson-content h3 {
+      color: #0072b5;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .phrase-card {
+      background: #f9f9ff;
+      border-left: 4px solid #8a2be2;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    
+    .french {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+    }
+    
+    .pronunciation {
+      color: #0072b5;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    
+    .english {
+      color: #666;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #0072b5;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    
+    .btn:hover {
+      background: #005a8f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    .active {
+      display: block;
+    }
+    
+    .tab {
+      margin-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn French</h1>
+    <p>Bienvenue! Master the language of love and diplomacy.</p>
+  </header>
+
+  <section class="course">
+    <h2>French Lessons</h2>
+    <ul class="lesson-list">
+      <li onclick="showContent('alphabet')">🔤 Alphabet & Pronunciation</li>
+      <div id="alphabet" class="lesson-content">
+        <h3>Alphabet & Pronunciation</h3>
+        <div class="phrase-card">
+          <div class="french">Bonjour (Hello)</div>
+          <div class="pronunciation">Pronunciation: bohn-zhoor</div>
+          <div class="english">Used as a general greeting throughout the day</div>
+        </div>
+        <div class="phrase-card">
+          <div class="french">Au revoir (Goodbye)</div>
+          <div class="pronunciation">Pronunciation: oh ruh-vwahr</div>
+          <div class="english">Standard way to say goodbye</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('greetings')">👋 Greetings & Introductions</li>
+      <div id="greetings" class="lesson-content">
+        <h3>Greetings & Introductions</h3>
+        <div class="phrase-card">
+          <div class="french">Comment vous appelez-vous? (What's your name?)</div>
+          <div class="pronunciation">Pronunciation: koh-mahn voo zah-play voo?</div>
+          <div class="english">Formal way to ask someone's name</div>
+        </div>
+        <div class="phrase-card">
+          <div class="french">Je m'appelle... (My name is...)</div>
+          <div class="pronunciation">Pronunciation: zhuh mah-pell...</div>
+          <div class="english">How to introduce yourself</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('food')">🍽️ Ordering Food</li>
+      <div id="food" class="lesson-content">
+        <h3>Ordering Food</h3>
+        <div class="phrase-card">
+          <div class="french">Je voudrais... (I would like...)</div>
+          <div class="pronunciation">Pronunciation: zhuh voo-dray...</div>
+          <div class="english">Polite way to order food</div>
+        </div>
+        <div class="phrase-card">
+          <div class="french">L'addition, s'il vous plaît (The check, please)</div>
+          <div class="pronunciation">Pronunciation: lah-dee-syon, seel voo play</div>
+          <div class="english">Asking for the bill</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('travel')">🗺️ Travel Phrases</li>
+      <div id="travel" class="lesson-content">
+        <h3>Travel Phrases</h3>
+        <div class="phrase-card">
+          <div class="french">Où est la gare? (Where is the train station?)</div>
+          <div class="pronunciation">Pronunciation: oo ay lah gahr?</div>
+          <div class="english">Asking for directions to the station</div>
+        </div>
+        <div class="phrase-card">
+          <div class="french">Combien ça coûte? (How much does it cost?)</div>
+          <div class="pronunciation">Pronunciation: kohm-byen sah koot?</div>
+          <div class="english">Asking about price</div>
+        </div>
+      </div>
+      
+      <li onclick="showContent('grammar')">📖 Grammar Basics</li>
+      <div id="grammar" class="lesson-content">
+        <h3>Grammar Basics</h3>
+        <div class="phrase-card">
+          <div class="french">Je suis / Tu es / Il est (I am / You are / He is)</div>
+          <div class="pronunciation">Pronunciation: zhuh swee / tyoo ay / eel ay</div>
+          <div class="english">Conjugation of the verb "to be" (être)</div>
+        </div>
+        <div class="phrase-card">
+          <div class="french">J'ai / Tu as / Il a (I have / You have / He has)</div>
+          <div class="pronunciation">Pronunciation: zhay / tyoo ah / eel ah</div>
+          <div class="english">Conjugation of the verb "to have" (avoir)</div>
+        </div>
+      </div>
+    </ul>
+    <a href="index.html" class="btn">⬅ Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Polyglot Academy</p>
+  </footer>
+
+  <script>
+    function showContent(id) {
+      // Hide all content divs
+      const contents = document.querySelectorAll('.lesson-content');
+      contents.forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // Show the selected content
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
