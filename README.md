@@ -1,71 +1,56 @@
-# 🌍 Polyglot Academy
+# Polyglot Academy - Language Learning Platform
 
-A simple, attractive **multi-page website** for teaching and learning languages.  
-Built using **HTML, CSS, and JavaScript**, designed to run locally in VS Code.
+A modern, interactive language learning website that allows users to explore basic vocabulary and phrases in multiple languages through an engaging interface.
 
----
+## Features
 
-## ✨ Features
-- 🖥️ Clean, responsive design  
-- 🎨 Separate **HTML, CSS, and JavaScript** files  
-- 📚 Individual pages for different languages (French, Spanish, Japanese, German)  
-- ⚡ Interactive cards and lesson previews  
-- 🌈 Smooth animations & hover effects  
+- **Multi-language Support**: Learn basic words and phrases in French, German, Japanese, and Spanish
+- **Interactive Design**: Beautiful animations and hover effects throughout the interface
+- **Country Flags**: Visual representation of each language with accurate flag designs
+- **Modal System**: Click any language to view basic vocabulary with pronunciation guides
+- **Responsive Layout**: Fully responsive design that works on all device sizes
+- **Multi-page Navigation**: Home, About, and Contact pages
 
----
-
-## 📂 Project Structure
-polyglot-academy/
-│── index.html # Home page
-│── french.html # French course page
-│── spanish.html # Spanish course page
-│── japanese.html # Japanese course page
-│── german.html # German course page
-│── style.css # Shared styles
-│── script.js # Shared interactivity
-│── README.md # Documentation
+## Project Structure
+├── index.html # Home page
+├── about.html # About page
+├── contact.html # Contact page
+├── css/
+│ └── style.css # All styles
+├── js/
+│ └── script.js # All JavaScript functionality
+└── README.md # Project documentation
 
 
----
+## Getting Started
 
-## 🚀 Getting Started
+To run this project locally:
 
-1. **Clone or Download** this project to your local machine.
+1. Download all files and maintain the folder structure
+2. Open `index.html` in any modern web browser
+3. Click on any language card to view basic vocabulary
+4. Use the navigation menu to explore different sections of the site
 
-2. Open the folder in **Visual Studio Code**.
+## Technical Details
 
-3. Install the VS Code extension **Live Server** (by Ritwick Dey).
+- Built with pure HTML, CSS, and JavaScript
+- Uses Font Awesome icons for visual elements
+- CSS Grid and Flexbox for responsive layouts
+- CSS animations for engaging user experience
+- No external frameworks or libraries required
 
-4. Right-click on `index.html` → **Open with Live Server**.
+## Browser Compatibility
 
-5. The website will launch in your browser at https://mellifluous-dasik-0990f7.netlify.app/
+This website works on all modern browsers including:
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
+## License
 
----
-
-## 📝 Usage
-- Start on the **Home Page** (`index.html`).  
-- Click on a language card (e.g., French) to go to its dedicated page.  
-- Each language page lists beginner lessons and interactive placeholders.  
-- You can expand the project by adding more lessons, exercises, or quizzes.
-
----
-
-## 🛠️ Tech Stack
-- **HTML5**  
-- **CSS3 (Flexbox + Grid)**  
-- **Vanilla JavaScript (ES6)**  
+This project is open source and available under the MIT License.
 
 ---
 
-## 📌 Future Improvements
-- Add a **navigation bar** across all pages.  
-- Implement **progress tracking** for lessons.  
-- Include **multimedia content** (audio for pronunciation, videos, etc.).  
-- Build a **contact form** for users.  
-
----
-
-## 📄 License
-This project is open-source and free to use under the **MIT License**.
-
+Happy language learning! 🌍
