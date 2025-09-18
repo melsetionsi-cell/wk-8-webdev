@@ -1,10 +1,10 @@
-# Polyglot Academy - Language Learning Platform
+# LINGUOLEARN - Language Learning Platform
 
 A modern, interactive language learning website that allows users to explore basic vocabulary and phrases in multiple languages through an engaging interface.
 
 ## Features
 
-- **Multi-language Support**: Learn basic words and phrases in French, German, Japanese, and Spanish
+- **Multi-language Support**: Learn basic words and phrases in French, German, Japanese, Spanish etc
 - **Interactive Design**: Beautiful animations and hover effects throughout the interface
 - **Country Flags**: Visual representation of each language with accurate flag designs
 - **Modal System**: Click any language to view basic vocabulary with pronunciation guides
