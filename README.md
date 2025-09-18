@@ -1,4 +1,4 @@
-# LINGUOLEARN - Language Learning Platform
+# LINGUALEARN - Language Learning Platform
 
 A modern, interactive language learning website that allows users to explore basic vocabulary and phrases in multiple languages through an engaging interface.
 
